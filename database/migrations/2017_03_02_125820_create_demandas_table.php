@@ -15,6 +15,7 @@ class CreateDemandasTable extends Migration
     {
         Schema::create('demandas', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('descricao');
             $table->timestamps();
         });
     }
