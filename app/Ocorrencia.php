@@ -6,12 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ocorrencia extends Model
 {
-  protected $fillable = [
-      'descricao', 'demanda_id',
+  protected $fillables = [
+      'local', 'solicitante_id', 'foto', 'descricao'
   ];
-  
-  public function demanda()
+
+  public function solicitante()
   {
-    return $this->belongsTo('App\Demanda');
+    return $this->belongsTo('App\Solicitante');
+  }
+
+  public function getFillables()
+  {
+    return $this->fillables;
   }
 }

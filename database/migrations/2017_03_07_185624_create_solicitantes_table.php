@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOcorrenciasTable extends Migration
+class CreateSolicitantesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateOcorrenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ocorrencias', function (Blueprint $table) {
+        Schema::create('solicitantes', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('local');
-            $table->text('descricao')->unsigned();
-            $table->text('foto')->nullable();
-            $table->integer('solicitante_id')->unsigned();
+            $table->text('nome');
+            $table->text('email')->unique();
             $table->timestamps();
-
         });
     }
 
@@ -31,6 +28,6 @@ class CreateOcorrenciasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ocorrencias');
+        Schema::dropIfExists('solicitantes');
     }
 }

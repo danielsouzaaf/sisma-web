@@ -9,6 +9,16 @@ use Response;
 
 class OcorrenciaController extends Controller
 {
+  public function validateRulesOnCreate(Request $request)
+  {
+    $rules = [
+      'descricao' => 'required',
+      'solicitante_id' => 'required',
+      'local' => 'required',
+
+    ];
+    return Validator::make($request->all(), $rules);
+  }
   public function store(Request $request)
   {
 
@@ -17,14 +27,16 @@ class OcorrenciaController extends Controller
     {
       //  return redirect(route('menus.create'))->withErrors($validator)->withInput();
     }
-    $model = new App\Ocorrencia();
+    $model = new \App\Ocorrencia();
 
-    foreach ($model->fillables as $column)
+    foreach ($model->getFillables() as $column)
     {
-      $model->$column = $request->get($column);
+      if ($request->get($column) != "")
+      {
+        $model->$column = $request->get($column);
+      }
     }
 
-    try
     DB::beginTransaction();
     try{
       $model->save();
@@ -32,6 +44,7 @@ class OcorrenciaController extends Controller
     }
     catch(\Exception $ex)
     {
+      dd($ex);
       DB::rollback();
     }
 
@@ -43,7 +56,7 @@ class OcorrenciaController extends Controller
   }
   public function index()
   {
-    return App\Ocorrencia::all();
+    return \App\Ocorrencia::all();
   }
   public function delete(Request $request)
   {
