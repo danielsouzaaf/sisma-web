@@ -52,7 +52,7 @@ class OcorrenciaController extends Controller
   }
   public function show($id)
   {
-
+    Return \App\Ocorrencia::find($id);
   }
   public function index()
   {

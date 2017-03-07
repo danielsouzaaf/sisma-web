@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('ocorrencias', 'OcorrenciaController@index')
 ->name('ocorrencias.get');
 Route::post('ocorrencias', 'OcorrenciaController@store');
+Route::get('ocorrencias/{id}', 'ocorrenciaController@show');
