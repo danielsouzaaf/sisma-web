@@ -36,7 +36,7 @@ class OcorrenciaController extends Controller
         $model->$column = $request->get($column);
       }
     }
-    $model->solicitante_id = \App\Solicitante::first()->id;
+    $model->solicitante_id = 1;
 
     DB::beginTransaction();
     try{
