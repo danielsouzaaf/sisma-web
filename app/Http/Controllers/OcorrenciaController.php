@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Validator;
 use Response;
+use Illuminate\Http\JsonResponse;
 
 class OcorrenciaController extends Controller
 {
@@ -25,8 +26,9 @@ class OcorrenciaController extends Controller
     $validator = $this->validateRulesOnCreate($request);
     if($validator->fails())
     {
-      //  return redirect(route('menus.create'))->withErrors($validator)->withInput();
+      return Response::json($validator->messages(), 400);
     }
+
     $model = new \App\Ocorrencia();
 
     foreach ($model->getFillables() as $column)
