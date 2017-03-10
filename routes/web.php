@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace' => 'api', 'middleware' => 'cors'], function () {
+  Route::get('ocorrencias', 'OcorrenciaController@index')
+  ->name('ocorrencias.get');
+  Route::post('ocorrencias', 'OcorrenciaController@store');
+  Route::get('ocorrencias/{id}', 'ocorrenciaController@show');
+});

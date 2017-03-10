@@ -16,7 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('ocorrencias', 'OcorrenciaController@index')
-->name('ocorrencias.get');
-Route::post('ocorrencias', 'OcorrenciaController@store')->middleware('cors');
-Route::get('ocorrencias/{id}', 'ocorrenciaController@show');
