@@ -47,11 +47,11 @@ class OcorrenciaController extends Controller
     }
     catch(\Exception $ex)
     {
-      dd($ex);
+      return Response::json($ex->getMessage(), 400);
       DB::rollback();
     }
 
-
+    return Response::json([], 200);
   }
   public function show($id)
   {
