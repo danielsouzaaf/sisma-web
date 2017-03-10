@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::group(['namespace' => 'barramento', 'middleware' => 'cors'], function () {
-  Route::get('ocorrencias', 'OcorrenciaController@index')
+  Route::get('ocorrencias', '\OcorrenciaController@index')
   ->name('ocorrencias.get');
-  Route::post('ocorrencias', 'OcorrenciaController@store');
-  Route::get('ocorrencias/{id}', 'ocorrenciaController@show');
+  Route::post('ocorrencias', '\OcorrenciaController@store');
+  Route::get('ocorrencias/{id}', '\OcorrenciaController@show');
 });
