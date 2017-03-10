@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('ocorrencias', 'OcorrenciaController@index')
 ->name('ocorrencias.get');
-Route::middleware('cors')->post('ocorrencias', 'OcorrenciaController@store');
+Route::post('ocorrencias', 'OcorrenciaController@store')->middleware('cors');
 Route::get('ocorrencias/{id}', 'ocorrenciaController@show');
