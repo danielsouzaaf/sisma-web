@@ -13,7 +13,7 @@ class OcorrenciaController extends Controller
   {
     $rules = [
       'descricao' => 'required',
-      'solicitante_id' => 'required',
+      //'solicitante_id' => 'required',
       'local' => 'required',
 
     ];
