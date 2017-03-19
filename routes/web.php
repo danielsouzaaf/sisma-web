@@ -21,3 +21,13 @@ Route::group(['prefix' => 'barramento', 'middleware' => 'cors'], function () {
   Route::post('ocorrencias', 'OcorrenciaController@store');
   Route::get('ocorrencias/{id}', 'OcorrenciaController@show');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/abrir-chamado', function () {
+    return view('abrirChamado');
+});
+Route::get('/detalhes-chamado', function () {
+    return view('detalhesChamado');
+});
