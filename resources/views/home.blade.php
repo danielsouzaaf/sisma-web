@@ -8,13 +8,14 @@
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-info">
           <div class="panel-heading">
-            Chamados
+            <strong>Chamados</strong>
           </div>
           <div class="panel-body">
             <table class="table">
               <tr>
-                <th class="col-md-8">Demanda</th>
-                <th></th>
+                <th class="col-md-6">Demanda</th>
+                <th class="col-md-4">Status</th>
+                <th class="col-md-2"></th>
               </tr>
             <?php
              /* @foreach($ocorrencias as $ocorrencia)
@@ -26,12 +27,14 @@
               ?>
               <tr>
                 <td>kk eae men</td>
+                <td>Esperando atribuição</td>
                 <td>
                   <a type="button" class="btn btn-primary" href="/detalhes-chamado">Detalhes</a>
                 </td>
               </tr>
               <tr>
                 <td>kk eae men</td>
+                <td>Esperando atribuição</td>
                 <td>
                   <a type="button" class="btn btn-primary" href="/detalhes-chamado">Detalhes</a>
                 </td>
@@ -45,14 +48,14 @@
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-info">
           <div class="panel-heading">
-            Ocorrências
+            <strong>Ocorrências</strong>
           </div>
           <div class="panel-body">
             <table class="table">
               <tr>
                 <th class="col-md-2">Local</th>
                 <th class="col-md-6">Descrição</th>
-                <th></th>
+                <th class="col-md-2"></th>
               </tr>
             <?php
              /* @foreach($ocorrencias as $ocorrencia)

@@ -31,3 +31,6 @@ Route::get('/abrir-chamado', function () {
 Route::get('/detalhes-chamado', function () {
     return view('detalhesChamado');
 });
+Route::get('/detalhes-atribuicao', function () {
+    return view('detalhesAtribuicao');
+});
