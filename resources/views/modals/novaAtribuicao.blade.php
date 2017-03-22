@@ -9,16 +9,15 @@
         <form class="form-horizontal" action="" method="">
           <div class="form-group">
             <label for="inputPrazo" class="col-sm-3 control-label">Prazo previsto</label>
-            <div class="col-sm-8">
+            <div class="col-sm-9">
               <input type="text" class="form-control" id="inputPrazo" placeholder="Prazo previsto"></input>
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-12">
-              <label for="selectTecnico" class="col-sm-3 control-label">Selecione o técnico</label>
               <select class="form-control col-sm-8" name="tecnico" id="selectTecnico">
-                <option value=""></option>
+                <option value="">Selecione o técnico</option>
                 <option value="0">Arthur</option>
                 <option value="1">Ayrton</option>
                 <option value="2">Daniel</option>

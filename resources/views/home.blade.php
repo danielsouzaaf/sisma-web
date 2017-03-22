@@ -70,7 +70,7 @@
                 <td>kk eae men</td>
                 <td>
                   <a type="button" class="btn btn-primary"  href="/abrir-chamado">Abrir Chamado</a>
-                  <a type="button" class="btn btn-primary">Vincular a um Chamado</a>
+                  <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
                 </td>
               </tr>
               <tr>
@@ -78,7 +78,7 @@
                 <td>kk eae men</td>
                 <td>
                   <a type="button" class="btn btn-primary"  href="/abrir-chamado">Abrir Chamado</a>
-                  <a type="button" class="btn btn-primary">Vincular a um Chamado</a>
+                  <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
                 </td>
               </tr>
             </table>

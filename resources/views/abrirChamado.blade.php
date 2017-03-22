@@ -25,15 +25,19 @@
             <div class="panel-body">
               <form class="form-horizontal" action="" method="">
                 <div class="form-group">
-                  <label for="inputDemanda" class="col-sm-1 control-label">Demanda</label>
-                  <div class="col-sm-10">
-                    <textarea style="resize:none;"  type="text" class="form-control" id="inputDemanda" rows="4" placeholder="Demanda"></textarea>
+                  <div class="col-sm-12">
+                    <select class="form-control col-sm-8" name="demanda" id="selectDemanda">
+                      <option value="">Selecione a demanda</option>
+                      <option value="0">Torneira</option>
+                      <option value="1">Mesa</option>
+                      <option value="2">Porta</option>
+                    </select>
                   </div>
-                </div>
+                </div><br>
                 <div class="form-group">
-                  <div class="col-sm-offset-1 col-sm-10">
-                    <button type="submit" class="btn btn-success">Concluir</button>
-                    <button type="submit" class="btn btn-danger">Cancelar</button>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Concluir</button>
+                    <a type="submit" class="btn btn-default" href="/home">Cancelar</a>
                   </div>
                 </div>
               </form>

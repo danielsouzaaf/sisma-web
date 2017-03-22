@@ -5,6 +5,7 @@
   @section('content')
     @include('modals.novaObservacao')
     @include('modals.novaAtribuicao')
+    @include('modals.finalizarChamado')
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
@@ -16,6 +17,7 @@
             <h4>Detalhes</h4>
             <ul class="list-group">
               <li class="list-group-item"><strong>Demanda:</strong> </li>
+              <li class="list-group-item"><strong>Local:</strong> </li>
               <li class="list-group-item"><strong>Status:</strong> </li>
               <li class="list-group-item"><strong>Data de abertura:</strong> </li>
             </ul>            <br>
@@ -35,7 +37,7 @@
                 </td>
               </tr>
             </table>         <br>
-            <h4 style="float:left">Atribuições</h4>
+            <h4 style="float:left">Atribuição</h4>
             <a style="float:right" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mostrarModalAtribuicao">Nova atribuição</a>
             <table class="table">
               <tr>
@@ -54,7 +56,11 @@
                 </td>
               </tr>
             </table>
+            <br><hr>
+            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalFinalizarChamado">Finalizar chamado</a>
+            <a type="button" class="btn btn-primary">Cancelar chamado</a>
           </div>
+
         </div>
       </div>
     </div>
@@ -64,6 +70,9 @@
     $('myImput').focus()
   })
   $('#mostrarModalObservacao').on('shown.bs.modal', function () {
+    $('myImput').focus()
+  })
+  $('#modalFinalizarChamado').on('shown.bs.modal', function () {
     $('myImput').focus()
   })
 

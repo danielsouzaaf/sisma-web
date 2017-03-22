@@ -1,16 +1,16 @@
-<div class="modal fade" tabindex="-1" role="dialog" id="mostrarModalObservacao">
+<div class="modal fade" tabindex="-1" role="dialog" id="mostrarModalDemanda">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Nova observação</h4>
+        <h4 class="modal-title">Nova demanda</h4>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" action="" method="">
           <div class="form-group">
-            <label for="inputObservacao" class="col-sm-2 control-label">Observação</label>
-            <div class="col-sm-10">
-              <textarea style="resize:none;" type="text" class="form-control" id="inputObservacao" rows="4" placeholder="Observação"></textarea>
+            <label for="inputDescricao" class="col-sm-3 control-label">Descrição</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputDescricao" placeholder="Descrição"></input>
             </div>
           </div>
           <div class="modal-footer">

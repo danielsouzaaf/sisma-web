@@ -1,4 +1,4 @@
-<div class="modal fade" tabindex="-1" role="dialog" id="mostrarModalObservacao">
+<div class="modal fade" tabindex="-1" role="dialog" id="mostrarModalObsAtribuicao">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,9 +8,9 @@
       <div class="modal-body">
         <form class="form-horizontal" action="" method="">
           <div class="form-group">
-            <label for="inputObservacao" class="col-sm-2 control-label">Observação</label>
+            <label for="inputObsAtribuicao" class="col-sm-2 control-label">Observação</label>
             <div class="col-sm-10">
-              <textarea style="resize:none;" type="text" class="form-control" id="inputObservacao" rows="4" placeholder="Observação"></textarea>
+              <textarea style="resize:none;" type="text" class="form-control" id="inputObsAtribuicao" rows="4" placeholder="Observação"></textarea>
             </div>
           </div>
           <div class="modal-footer">

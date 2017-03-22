@@ -34,3 +34,12 @@ Route::get('/detalhes-chamado', function () {
 Route::get('/detalhes-atribuicao', function () {
     return view('detalhesAtribuicao');
 });
+Route::get('/demandas', function () {
+    return view('demandas');
+});
+Route::get('/editar-demanda', function () {
+    return view('editarDemanda');
+});
+Route::get('/vincular-chamado', function () {
+    return view('vincularChamado');
+});
