@@ -16,7 +16,7 @@ class CreateChamadosTable extends Migration
         Schema::create('chamados', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('demanda_id')->unsigned();
-            $table->integer('ocorrencia_id')->nullable()->unsigned();
+            //$table->integer('ocorrencia_id')->nullable()->unsigned();
             $table->integer('status_id')->unsigned();
             $table->timestamps();
         });
