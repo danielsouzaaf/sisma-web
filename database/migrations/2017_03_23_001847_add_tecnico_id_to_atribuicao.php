@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddSolicitanteToOcorrencia extends Migration
+class AddTecnicoIdToAtribuicao extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddSolicitanteToOcorrencia extends Migration
      */
     public function up()
     {
-      Schema::table('ocorrencias', function(Blueprint $table) {
-          $table->foreign('solicitante_id')->references('id')->on('solicitantes');
-      });
+        Schema::table('atribuicaos', function(Blueprint $table){
+            $table->foreign('tecnico_id')->references('id')->on('tecnicos');
+        });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddSolicitanteToOcorrencia extends Migration
      */
     public function down()
     {
-        Schema::table('ocorrencias', function(Blueprint $table) {
-          $table->dropForeign('solicitante_id');
+        Schema::table('atribuicaos', function(Blueprint $table) {
+            $table->dropForeign('tecnico_id');
         });
     }
 }
