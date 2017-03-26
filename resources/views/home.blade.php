@@ -69,6 +69,7 @@
                     <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
                   </td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
