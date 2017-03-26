@@ -18,7 +18,7 @@ class CreateOcorrenciasTable extends Migration
             $table->text('local');
             $table->text('descricao');
             $table->text('foto')->nullable();
-            $table->integer('protocolo')->unsigned();
+            $table->integer('protocolo')->unsigned()->nullable();
             $table->integer('solicitante_id')->unsigned();
             $table->integer('chamado_id')->unsigned()->nullable();
             $table->timestamps();
