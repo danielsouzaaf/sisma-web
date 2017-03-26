@@ -52,35 +52,24 @@
           </div>
           <div class="panel-body">
             <table class="table">
-              <tr>
-                <th class="col-md-2">Local</th>
-                <th class="col-md-6">Descrição</th>
-                <th class="col-md-2"></th>
-              </tr>
-            <?php
-             /* @foreach($ocorrencias as $ocorrencia)
+              <thead>
+                <tr>
+                  <th class="col-md-2">Local</th>
+                  <th class="col-md-6">Descrição</th>
+                  <th class="col-md-2"></th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach($ocorrencias as $ocorrencia)
                 <tr>
                   <td>{{ $ocorrencia->local }}</td>
                   <td>{{ $ocorrencia->descricao }}</td>
+                  <td>
+                    <a type="button" class="btn btn-primary"  href="/abrir-chamado">Abrir Chamado</a>
+                    <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
+                  </td>
                 </tr>
-              @endforeach--> */
-              ?>
-              <tr>
-                <td>kk eae men</td>
-                <td>kk eae men</td>
-                <td>
-                  <a type="button" class="btn btn-primary"  href="/abrir-chamado">Abrir Chamado</a>
-                  <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
-                </td>
-              </tr>
-              <tr>
-                <td>kk eae men</td>
-                <td>kk eae men</td>
-                <td>
-                  <a type="button" class="btn btn-primary"  href="/abrir-chamado">Abrir Chamado</a>
-                  <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
-                </td>
-              </tr>
+              </tbody>
             </table>
           </div>
         </div>

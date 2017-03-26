@@ -22,9 +22,8 @@ Route::group(['prefix' => 'barramento', 'middleware' => 'cors'], function () {
   Route::get('ocorrencias/{id}', 'OcorrenciaController@show');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', 'HomeController@index');
+
 Route::get('/abrir-chamado', function () {
     return view('abrirChamado');
 });
