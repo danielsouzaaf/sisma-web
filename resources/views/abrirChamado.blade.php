@@ -13,9 +13,9 @@
             <div class="panel-body">
               <p style="text-align:center"><img src="https://placehold.it/200x200" alt=""></div></p>
             <ul class="list-group">
-              <li class="list-group-item"><strong>Local:</strong> </li>
-              <li class="list-group-item"><strong>Descrição:</strong> </li>
-              <li class="list-group-item"><strong>Data de abertura:</strong> </li>
+              <li class="list-group-item"><strong>Local: </strong>{{ $ocorrencia->local}} </li>
+              <li class="list-group-item"><strong>Descrição: </strong>{{ $ocorrencia->descricao }}</li>
+              <li class="list-group-item"><strong>Data de abertura: </strong>{{ $ocorrencia->created_at }}</li>
             </ul>
           </div>
           <div class="panel panel-default">
@@ -26,12 +26,15 @@
               <form class="form-horizontal" action="" method="">
                 <div class="form-group">
                   <div class="col-sm-12">
+
                     <select class="form-control col-sm-8" name="demanda" id="selectDemanda">
                       <option value="">Selecione a demanda</option>
-                      <option value="0">Torneira</option>
-                      <option value="1">Mesa</option>
-                      <option value="2">Porta</option>
+                      <?php $value=0; ?>
+                      @foreach($demandas as $demanda)
+                        <option value="{{ $value++ }}">{{ $demanda->descricao }}</option>
+                      @endforeach
                     </select>
+
                   </div>
                 </div><br>
                 <div class="form-group">

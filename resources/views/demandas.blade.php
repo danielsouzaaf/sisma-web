@@ -12,36 +12,25 @@
             <h4 style="float:left">Demandas</h4>
             <a style="float:right" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mostrarModalDemanda">Nova demanda</a>
             <table class="table">
-              <tr>
-                <th class="col-md-2">ID</th>
-                <th class="col-md-6">Descrição</th>
-                <th class="col-md-2"></th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Torneira</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="/editar-demanda">Editar</a>
-                  <a type="button" class="btn btn-primary">Excluir</a>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Mesa</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="/editar-demanda">Editar</a>
-                  <a type="button" class="btn btn-primary">Excluir</a>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Porta</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="/editar-demanda">Editar</a>
-                  <a type="button" class="btn btn-primary">Excluir</a>
-                </td>
-              </tr>
-
+              <thead>
+                <tr>
+                  <th class="col-md-2">ID</th>
+                  <th class="col-md-6">Descrição</th>
+                  <th class="col-md-2"></th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach($demandas as $demanda)
+                <tr>
+                  <td>{{ $demanda->id }}</td>
+                  <td>{{ $demanda->descricao }}</td>
+                  <td>
+                    <a type="button" class="btn btn-primary" href="/editar-demanda/{{ $demanda->id }}">Editar</a>
+                    <a type="button" class="btn btn-primary">Excluir</a>
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
             </table>
           </div>
         </div>

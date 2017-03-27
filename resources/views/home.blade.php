@@ -12,33 +12,25 @@
           </div>
           <div class="panel-body">
             <table class="table">
-              <tr>
-                <th class="col-md-6">Demanda</th>
-                <th class="col-md-4">Status</th>
-                <th class="col-md-2"></th>
-              </tr>
-            <?php
-             /* @foreach($ocorrencias as $ocorrencia)
+              <thead>
                 <tr>
-                  <td>{{ $ocorrencia->local }}</td>
-                  <td>{{ $ocorrencia->descricao }}</td>
+                  <th class="col-md-6">Demanda</th>
+                  <th class="col-md-4">Status</th>
+                  <th class="col-md-2"></th>
                 </tr>
-              @endforeach--> */
-              ?>
-              <tr>
-                <td>kk eae men</td>
-                <td>Esperando atribuição</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="/detalhes-chamado">Detalhes</a>
-                </td>
-              </tr>
-              <tr>
-                <td>kk eae men</td>
-                <td>Esperando atribuição</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="/detalhes-chamado">Detalhes</a>
-                </td>
-              </tr>
+              </thead>
+              <tbody>
+                @foreach($chamados as $chamado)
+                  <tr>
+                    <td>{{ \App\Demanda::find($chamado->demanda_id)->descricao }}</td>
+                    <td>{{ \App\Status::find($chamado->status_id)->created_at }}</td>
+                    <td>
+                      <a type="button" class="btn btn-primary" href="/detalhes-chamado/{{ $chamado->id }}">Detalhes</a>
+                    </td>
+                  </tr>
+
+                @endforeach
+              </tbody>
             </table>
           </div>
         </div>
@@ -65,8 +57,8 @@
                   <td>{{ $ocorrencia->local }}</td>
                   <td>{{ $ocorrencia->descricao }}</td>
                   <td>
-                    <a type="button" class="btn btn-primary"  href="/abrir-chamado">Abrir Chamado</a>
-                    <a type="button" class="btn btn-primary" href="/vincular-chamado">Vincular a um Chamado</a>
+                    <a type="button" class="btn btn-primary"  href="/abrir-chamado/{{ $ocorrencia->id }}">Abrir Chamado</a>
+                    <a type="button" class="btn btn-primary" href="/vincular-chamado/{{ $ocorrencia->id }}">Vincular a um Chamado</a>
                   </td>
                 </tr>
                 @endforeach

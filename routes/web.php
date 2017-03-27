@@ -23,22 +23,17 @@ Route::group(['prefix' => 'barramento', 'middleware' => 'cors'], function () {
 });
 
 Route::get('/home', 'HomeController@index');
-
-Route::get('/abrir-chamado', function () {
+/*Route::get('/abrir-chamado', function () {
     return view('abrirChamado');
-});
-Route::get('/detalhes-chamado', function () {
-    return view('detalhesChamado');
-});
-Route::get('/detalhes-atribuicao', function () {
-    return view('detalhesAtribuicao');
-});
-Route::get('/demandas', function () {
-    return view('demandas');
-});
-Route::get('/editar-demanda', function () {
-    return view('editarDemanda');
-});
-Route::get('/vincular-chamado', function () {
-    return view('vincularChamado');
-});
+});*/
+Route::get('/abrir-chamado/{id}', 'AbrirChamadoController@show');
+
+Route::get('/detalhes-chamado/{id}', 'DetalhesChamadoController@show');
+
+Route::get('/detalhes-atribuicao/{id}', 'DetalhesAtribuicaoController@show');
+
+Route::get('/vincular-chamado/{id}', 'VincularChamadoController@show');
+
+Route::get('/demandas', 'DemandaController@index');
+
+Route::get('/editar-demanda/{id}', 'DemandaController@show');

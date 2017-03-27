@@ -10,6 +10,8 @@ class HomeController extends Controller
     {
         $ocorrencias = \App\Ocorrencia::all();
         $demandas = \App\Demanda::all();
-        return view('home', compact('ocorrencias', 'demandas'));
+        $chamados = \App\Chamado::all();
+        return view('home', compact('ocorrencias', 'demandas', 'chamados'));
+
     }
 }

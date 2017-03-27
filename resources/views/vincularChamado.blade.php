@@ -13,9 +13,9 @@
           <div class="panel-body">
             <p style="text-align:center"><img src="https://placehold.it/200x200" alt=""></div></p>
           <ul class="list-group">
-            <li class="list-group-item"><strong>Local:</strong> </li>
-            <li class="list-group-item"><strong>Descrição:</strong> </li>
-            <li class="list-group-item"><strong>Data de abertura:</strong> </li>
+            <li class="list-group-item"><strong>Local:</strong> {{ $ocorrencia->local }}</li>
+            <li class="list-group-item"><strong>Descrição:</strong> {{ $ocorrencia->descricao }}</li>
+            <li class="list-group-item"><strong>Data de abertura:</strong> {{ $ocorrencia->created_at }}</li>
           </ul>
         </div>
         <div class="panel panel-default">
@@ -24,33 +24,24 @@
           </div>
           <div class="panel-body">
             <table class="table">
-              <tr>
-                <th class="col-md-6">Demanda</th>
-                <th class="col-md-4">Status</th>
-                <th class="col-md-2"></th>
-              </tr>
-            <?php
-             /* @foreach($ocorrencias as $ocorrencia)
+              <thead>
                 <tr>
-                  <td>{{ $ocorrencia->local }}</td>
-                  <td>{{ $ocorrencia->descricao }}</td>
+                  <th class="col-md-6">Demanda</th>
+                  <th class="col-md-4">Status</th>
+                  <th class="col-md-2"></th>
                 </tr>
-              @endforeach--> */
-              ?>
-              <tr>
-                <td>kk eae men</td>
-                <td>Esperando atribuição</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="">Selecionar</a>
-                </td>
-              </tr>
-              <tr>
-                <td>kk eae men</td>
-                <td>Esperando atribuição</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="">Selecionar</a>
-                </td>
-              </tr>
+              </thead><tbody>
+                @foreach($chamados as $chamado)
+                  <tr>
+                    <td>{{ \App\Demanda::find($chamado->demanda_id)->descricao }}</td>
+                    <td>{{ \App\Status::find($chamado->status_id)->created_at }}</td>
+                    <td>
+                      <a type="button" class="btn btn-primary" href="">Selecionar</a>
+                    </td>
+                  </tr>
+
+                @endforeach
+              </tbody>
             </table>
           </div>
         </div>
