@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ocorrencia extends Model
 {
-  protected $fillables = [
+
+    protected $fillables = [
       'local', 'solicitante_id', 'foto', 'descricao', 'created_at'
   ];
 
@@ -19,4 +20,10 @@ class Ocorrencia extends Model
   {
     return $this->fillables;
   }
+
+  public function chamado()
+  {
+      return $this->belongsTo('App\Chamado');
+  }
+
 }

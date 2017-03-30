@@ -23,15 +23,14 @@
               <h4>Abrir chamado vinculado a esta ocorrência</h4>
             </div>
             <div class="panel-body">
-              <form class="form-horizontal" action="" method="">
+              <form class="form-horizontal" action="{{ route('chamado.store', $ocorrencia->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                   <div class="col-sm-12">
 
                     <select class="form-control col-sm-8" name="demanda" id="selectDemanda">
                       <option value="">Selecione a demanda</option>
-                      <?php $value=0; ?>
                       @foreach($demandas as $demanda)
-                        <option value="{{ $value++ }}">{{ $demanda->descricao }}</option>
+                        <option value="{{ $demanda->id }}">{{ $demanda->descricao }}</option>
                       @endforeach
                     </select>
 

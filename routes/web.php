@@ -27,12 +27,15 @@ Route::get('/home', 'HomeController@index');
     return view('abrirChamado');
 });*/
 Route::get('/abrir-chamado/{id}', 'AbrirChamadoController@show');
+Route::post('abrir-chamado/{id}', 'ChamadoController@store')->name('chamado.store');
 
 Route::get('/detalhes-chamado/{id}', 'DetalhesChamadoController@show');
 
 Route::get('/detalhes-atribuicao/{id}', 'DetalhesAtribuicaoController@show');
 
 Route::get('/vincular-chamado/{id}', 'VincularChamadoController@show');
+
+Route::get('/vincular-chamado/{chamadoid}/ocorrencia/{ocorrenciaid}', 'VincularChamadoController@store')->name('vincular.ocorrencia');
 
 Route::get('/demandas', 'DemandaController@index');
 

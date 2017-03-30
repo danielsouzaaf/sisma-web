@@ -33,10 +33,10 @@
               </thead><tbody>
                 @foreach($chamados as $chamado)
                   <tr>
-                    <td>{{ \App\Demanda::find($chamado->demanda_id)->descricao }}</td>
-                    <td>{{ \App\Status::find($chamado->status_id)->created_at }}</td>
+                    <td>{{ $chamado->demanda->descricao }}</td>
+                    <td>{{ $chamado->status->descricao }}</td>
                     <td>
-                      <a type="button" class="btn btn-primary" href="">Selecionar</a>
+                      <a class="btn btn-primary" href="{{ route('vincular.ocorrencia', [$chamado->id, $ocorrencia->id]) }}">Vincular</a>
                     </td>
                   </tr>
 
