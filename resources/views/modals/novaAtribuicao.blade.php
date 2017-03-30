@@ -6,11 +6,11 @@
         <h4 class="modal-title">Nova atribuição</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" action="" method="">
+        <form class="form-horizontal" action="" method="POST">
           <div class="form-group">
             <label for="inputPrazo" class="col-sm-3 control-label">Prazo previsto</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="inputPrazo" placeholder="Prazo previsto"></input>
+              <input type="text" class="form-control" id="inputPrazo" placeholder="Prazo previsto">
             </div>
           </div>
 
@@ -18,9 +18,9 @@
             <div class="col-sm-12">
               <select class="form-control col-sm-8" name="tecnico" id="selectTecnico">
                 <option value="">Selecione o técnico</option>
-                <option value="0">Arthur</option>
-                <option value="1">Ayrton</option>
-                <option value="2">Daniel</option>
+                {{--@foreach($tecnicos as $tecnico)--}}
+                  {{--<option value="{{$tecnico->id}}">{{$tecnico->nome}}</option>--}}
+                {{--@endforeach--}}
               </select>
             </div>
           </div>

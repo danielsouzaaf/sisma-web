@@ -32,6 +32,6 @@ class VincularChamadoController extends Controller
     {
         Ocorrencia::find($ocorrenciaid)->update(['chamado_id' => Chamado::find($chamadoid)->id]);
 
-        return 0;
+        return redirect()->route('home');
     }
 }

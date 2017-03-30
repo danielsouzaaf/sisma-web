@@ -8,8 +8,9 @@ class Ocorrencia extends Model
 {
 
     protected $fillables = [
-      'local', 'solicitante_id', 'foto', 'descricao', 'created_at'
+      'local', 'solicitante_id', 'foto', 'descricao', 'created_at', 'chamado_id',
   ];
+    protected $guarded = [];
 
   public function solicitante()
   {
